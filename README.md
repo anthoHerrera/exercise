@@ -1,11 +1,11 @@
 # exercise
 The company ACME offers their employees the flexibility to work the hours they want.
 They will pay for the hours worked based on the day of the week and time of day, according to the following table:
-Monday - Friday:
+### Monday - Friday:
 - 00:01 - 09:00 25 USD
 - 09:01 - 18:00 15 USD
 - 18:01 - 00:00 20 USD
-Saturday and Sunday:
+### Saturday and Sunday:
 - 00:01 - 09:00 30 USD
 - 09:01 - 18:00 20 USD
 - 18:01 - 00:00 25 USD
@@ -27,13 +27,13 @@ For example:
 
 Case 1:
 
-INPUT RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00
-OUTPUT: The amount to pay RENE is: 215 USD
+- INPUT RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00
+- OUTPUT: The amount to pay RENE is: 215 USD
 
 Case 2:
 
-INPUT ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
-OUTPUT: The amount to pay ASTRID is: 85 USD
+- INPUT ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
+- OUTPUT: The amount to pay ASTRID is: 85 USD
 
 # Solution
 This solution is implemented using javascript (ES6) as the programming language, in general the functional programming paradigm was used to develop the solution, in the description of the problem the calculation of time payments between two time bands is not detailed, however this solution can calculate the payment of continuous slots for example ANTHONY=TU12:00-22:00,SU20:00-21:00; for the calculation of 'TU' two time bands are crossed, 09:01-18:00 and 18:01-00:00; this calculation is possible in this implementation. For the implementation of unit tests I used 'jest'. 
