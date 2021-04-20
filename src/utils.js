@@ -133,7 +133,7 @@ export const readInputFile = (file) => {
             let employees = data.split("\n");
 
             for (let emp of employees) {
-                if (isValidInput(emp)) {
+                if (isValidInput(emp.trim().toUpperCase().replace(/\s/g, ''))) {
                     let [employeeName, schedule] = getDataEmployee(emp);
                     let days = getScheduleInfo(schedule);
                     showPaid(employeeName, calculateTotal(days));
