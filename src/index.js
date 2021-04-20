@@ -13,5 +13,8 @@ import { readInputFile } from "./utils.js";
  * 09:01 - 18:00 20 USD
  * 18:01 - 00:00 25 USD
  */
-
-readInputFile(process.argv[2]);
+process.argv.length === 3
+    ? readInputFile(process.argv[2])
+    : console.log(
+          "Incorrect number of args\nTry this: node src/index.js <path_to_file>."
+      );
